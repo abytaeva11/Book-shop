@@ -1,0 +1,87 @@
+#footer{
+    background: #818EEA;
+    padding: 70px 0 40px 0 ;
+}
+.footer{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+.footer-block h1{
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1.5px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.footer-block p {
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    margin: 10px 0 ;
+    align-items: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.footer-block input {
+   background: none;
+    border: 1px solid white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footer-block button {
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    border: 1px solid white;
+    padding: 9px 20px;
+}
+.footer-block{
+    margin: 0 30px;
+}
+.footer-block h3 {
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.footer-block h6{
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
