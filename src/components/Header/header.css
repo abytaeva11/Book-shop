@@ -1,0 +1,36 @@
+
+#header {
+    padding: 20px 0;
+    position: sticky;
+    background: #FFFFFF;
+    z-index: 100;
+    top: 0;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.nav a {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #19272E;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+.icon {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.icon svg {
+    margin: 0 10px;
+}

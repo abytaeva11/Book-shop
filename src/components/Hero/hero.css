@@ -1,0 +1,232 @@
+.hero{
+
+}
+.hero h1{
+    position: absolute;
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-top: -290px;
+    margin-left: 350px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.hero p {
+    font-family: 'Public Sans',sans-serif;
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #19272E;
+    flex: none;
+    margin-top: -230px;
+    margin-left: 430px;
+    order: 1;
+    flex-grow: 0;
+}
+.block {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+    margin: 0 80px;
+    /*margin-left: 70px;*/
+
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0 70px 0  ;
+}
+.title h1 {
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #19272E;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-left: 100px;
+}
+.title a {
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    margin-right: 110px;
+
+    text-align: center;
+    color: #818EEA;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.block-block{
+    background: rgba(225, 225, 225, 0.65);
+    width: 150px;
+    height: 180px;
+    display: flex;
+    margin: 0 20px;
+    border: 2px solid rgba(128, 128, 128, 0.08);
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.block2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block2-title{
+    margin: 50px 40px;
+    transition: .4s;
+    cursor: pointer;
+}
+.block2-title:hover{
+    transform: scale(1.1);
+}
+.block2-title1{
+    margin-bottom: -70px;
+    transition: .4s;
+    cursor: pointer;
+
+
+}
+.block2-title1:hover{
+    transform: scale(1.1);
+}
+
+.block2-title h3{
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #19272E;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.block2-title p {
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #19272E;
+    opacity: 0.7;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.text h1{
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #19272E;
+    padding: 100px 0 0 0 ;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.block2-title1 h3{
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #19272E;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.block2-title1 p {
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #19272E;
+    opacity: 0.7;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.block3 {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin-left: 70px;
+    gap: 20px;
+    width: 1100px;;
+}
+.block3 img {
+    width: 200px;
+    height: 300px;
+}
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0 70px 0  ;
+
+}
+.page h1{
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #19272E;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-left: 100px;
+}
+.page a {
+    font-family: 'Public Sans',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    margin-right: 110px;
+
+    text-align: center;
+    color: #818EEA;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.title-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.block4 h1{
+    font-family: 'Public Sans',sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #19272E;
+    flex: none;
+    order: 0;
+    padding: 100px 0 0 0 ;
+    flex-grow: 0;
+}
+
+
