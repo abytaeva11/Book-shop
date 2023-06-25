@@ -24,6 +24,7 @@
 }
 a{
     color: #000bff;
+    text-decoration: black;
 }
 .books-all {
     margin:0 10px  ;
@@ -57,6 +58,7 @@ a{
     align-items: center;
     flex-direction: column;
     height: 100%;
+    margin: 15px 10px;
     /*width: 304px;*/
 }
 .book-all h2{
@@ -65,6 +67,7 @@ a{
     font-size: 18px;
     font-family: Public Sans,sans-serif;
     line-height: 120%;
+    margin: 10px 0;
 }
 .book-all h3{
     width: 200px;
@@ -102,6 +105,7 @@ a{
     align-items: center;
     display: flex;
     justify-content: center;
+    margin-right: 15px;
 }
 .just span{
     color:  #818EEA;
@@ -111,26 +115,10 @@ a{
     opacity: 0.5;
 
 }
-
-
 select {
     color:  #818EEA;
-
+    outline: none;
 }
-.spann {
-    display: flex;
-    align-items: center;
-}
-
-
-
-.just select{
-    border: none;
-
-}
-
-
-
 .categories h4{
     margin-left: 15px;
 
@@ -140,6 +128,8 @@ select {
 }
 .categories a{
     margin-left: 17px;
+    width: 100px;
+    border-bottom: 1px solid #000bff;
 }
 .text{
     margin: 50px 0;
