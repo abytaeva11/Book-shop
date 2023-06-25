@@ -1,36 +1,22 @@
 import React from 'react';
-// @ts-ignore
 import img from "../Hero/img/Main image.png"
-// @ts-ignore
 import book2 from "../Hero/img/book2.png"
-// @ts-ignore
 import book3 from "../Hero/img/book3.png"
-// @ts-ignore
 import book4 from "../Hero/img/book4.png"
-// @ts-ignore
 import book5 from "../Hero/img/book5.png"
-// @ts-ignore
 import book6 from "../Hero/img/book6.png"
-// @ts-ignore
 import book7 from "../Hero/img/book7.png"
-// @ts-ignore
 import hover from "../Hero/img/hover1.png"
-// @ts-ignore
 import hover1 from "../Hero/img/hover2.png"
-// @ts-ignore
 import hover2 from "../Hero/img/hover3.png"
-// @ts-ignore
 import bio from "../Hero/img/bio1.png"
-// @ts-ignore
 import bio1 from "../Hero/img/bio2.png"
-// @ts-ignore
 import bio2 from "../Hero/img/bio3.png"
-// @ts-ignore
 import bio3 from "../Hero/img/bio4.png"
-// @ts-ignore
 import bio4 from "../Hero/img/bio5.png"
-// @ts-ignore
 import end from "../Hero/img/end1.png"
+import {Link, Route, Routes} from "react-router-dom";
+import BookList from "../../Pages/Tabs/UserItems";
 
 
 const Hero = () => {
@@ -47,8 +33,8 @@ const Hero = () => {
                         <div className="title">
                             <h1>Genres</h1>
                             <div>
-                                <a href="">View all</a>
-                            </div>
+
+<Link to="/view">View all</Link>                            </div>
                         </div>
                         <div className="block">
                             <div className="block-block">

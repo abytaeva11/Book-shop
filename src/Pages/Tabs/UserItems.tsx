@@ -3,7 +3,7 @@ import img1 from "../../assets/img/img1.png";
 import img3 from "../../assets/img/img3.png";
 import img2 from "../../assets/img/img2.png";
 import img4 from "../../assets/img/img4.png";
-import img5 from "../../assets/img/img55.png";
+import img5 from "../../assets/img/img5.png";
 import img6 from "../../assets/img/img6.png";
 import img7 from "../../assets/img/img7.png";
 import img8 from "../../assets/img/img8.png";
@@ -19,15 +19,18 @@ interface Book {
 
 const BookList: React.FC = () => {
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+    const [selectedCount, setSelectedCount] = useState<number>(0);
 
     const handleCategoryChange = (category: string) => {
-        if (selectedCategories.includes(category)) {
-            setSelectedCategories(selectedCategories.filter((cat) => cat !== category));
-        } else {
-            setSelectedCategories([...selectedCategories, category]);
+        if (selectedCount < 3 || selectedCategories.includes(category)) {
+            const updatedCategories = selectedCategories.includes(category)
+                ? selectedCategories.filter((c) => c !== category)
+                : [...selectedCategories, category];
+
+            setSelectedCategories(updatedCategories);
+            setSelectedCount(updatedCategories.length);
         }
     };
-
     const books: Book[] = [
         {
             title: ' THE SUBTLE ART OF NOT GIVING A F*CK',
@@ -38,52 +41,53 @@ const BookList: React.FC = () => {
         {
             title: '8 RULES OF LOVE',
             text: "by Jay Shetty",
-            category: 'Category 1',
+            category: 'Category 2',
             image: img2,
         },
         {
             title: 'THE CREATIVE ACT',
             text: "by Rick Rubin with Neil Strauss",
-            category: 'Category 1',
+            category: 'Category 3',
             image: img3,
         },
         {
             title: 'THE BOY, THE MOLE, THE FOX AND THE HORSE',
             text: "by Charlie Mackesy",
-            category: 'Category 1',
+            category: 'Category 4',
             image: img4,
         },
         {
             title: 'HARRY POTTER',
             text: " by J.K. Rowling",
-            category: 'Category 1',
+            category: 'Category 5',
             image: img5,
         },
         {
             title: 'IT ENDS WITH US',
             text: "by Colleen Hoover",
-            category: 'Category 1',
+            category: 'Category 6',
             image: img6,
         },
 
         {
             title: 'IT STARTS WITH US',
             text: "by Colleen Hoover",
-            category: 'Category 3',
+            category: 'Category 7',
             image: img7,
         },
         {
             title: 'HEART BONES',
             text: "by Colleen Hoover",
-            category: 'Category 2',
+            category: 'Category 8',
             image: img8,
         },
         {
             title: 'SOMEONE ELSE',
             text: "by Jojo Moyes",
-            category: 'Category 2',
+            category: 'Category 9',
             image: img9,
         },
+
     ];
 
     let filteredBooks: Book[] = books;
@@ -108,7 +112,7 @@ const BookList: React.FC = () => {
                                 <a href="">Clear filters</a>
                             </div>
 
-                            <h3 >Genres</h3>
+                            <h3 style={{margin:" 0 0 10px 0"}} >Genres</h3>
 
 
                             <label>
@@ -116,6 +120,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 1')}
                                     onChange={() => handleCategoryChange('Category 1')}
+                                    disabled={selectedCount === 3 && !selectedCategories.includes('Category 1')}
+
                                 />
                                 <h4>Autographed Books</h4>
                             </label>
@@ -124,6 +130,7 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 2')}
                                     onChange={() => handleCategoryChange('Category 2')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 2')}
                                 />
                                 <h4> Sci-Fi</h4>
                             </label>
@@ -132,6 +139,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 3')}
                                     onChange={() => handleCategoryChange('Category 3')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 3')}
+
                                 />
                                 <h4> For kids</h4>
                             </label>
@@ -140,6 +149,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 4')}
                                     onChange={() => handleCategoryChange('Category 4')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 4')}
+
                                 />
                                 <h4> For teenagers</h4>
                             </label>
@@ -148,6 +159,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 5')}
                                     onChange={() => handleCategoryChange('Category 5')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 5')}
+
                                 />
                                 <h4> Finance</h4>
                             </label>
@@ -156,6 +169,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 6')}
                                     onChange={() => handleCategoryChange('Category 6')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 6')}
+
                                 />
                                 <h4> Detective</h4>
                             </label>
@@ -164,6 +179,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 7')}
                                     onChange={() => handleCategoryChange('Category 7')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 7')}
+
                                 />
                                 <h4>Romantic</h4>
                             </label>
@@ -172,6 +189,8 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 8')}
                                     onChange={() => handleCategoryChange('Category 8')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 8')}
+
                                 />
                                 <h4> Psychology</h4>
                             </label>
@@ -180,30 +199,37 @@ const BookList: React.FC = () => {
                                     type="checkbox"
                                     checked={selectedCategories.includes('Category 9')}
                                     onChange={() => handleCategoryChange('Category 9')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 9')}
+
                                 />
                                 <h4>Self-Improvement</h4>
                             </label>
                             <label>
                                 <input
                                     type="checkbox"
-                                    checked={selectedCategories.includes('Category 9')}
-                                    onChange={() => handleCategoryChange('Category 9')}
+                                    checked={selectedCategories.includes('Category 10')}
+                                    onChange={() => handleCategoryChange('Category 10')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 10')}
+
                                 />
                                 <h4>Educational</h4>
                             </label>
                             <label>
                                 <input
                                     type="checkbox"
-                                    checked={selectedCategories.includes('Category 9')}
-                                    onChange={() => handleCategoryChange('Category 9')}
+                                    checked={selectedCategories.includes('Category 11')}
+                                    onChange={() => handleCategoryChange('Category 11')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 11')}
+
                                 />
                                 <h4>Literature</h4>
                             </label>
                             <label>
                                 <input
                                     type="checkbox"
-                                    checked={selectedCategories.includes('Category 9')}
-                                    onChange={() => handleCategoryChange('Category 9')}
+                                    checked={selectedCategories.includes('Category 12')}
+                                    onChange={() => handleCategoryChange('Category 12')}
+                                    disabled={selectedCount===3 && !selectedCategories.includes('Category 12')}
                                 />
                                 <h4>Religion</h4>
                             </label>
@@ -211,8 +237,9 @@ const BookList: React.FC = () => {
 
                         <div className="options">
                             <div className="just">
+                                <span>Sort By</span>
                                 <select>
-                                    <option><h4>Sort By</h4> <h5 >Popular</h5></option>
+                                    <option className="we"> <h5>Popular</h5></option>
                                     <option><h5>Popular</h5></option>
                                     <option><h5>Popular</h5></option>
                                 </select>
