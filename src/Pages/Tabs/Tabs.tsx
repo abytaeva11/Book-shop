@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import img1 from "../../assets/img/img1.png";
 import img3 from "../../assets/img/img3.png";
 import img2 from "../../assets/img/img2.png";
@@ -9,60 +10,74 @@ import img7 from "../../assets/img/img7.png";
 import img8 from "../../assets/img/img8.png";
 import img9 from "../../assets/img/img9.png";
 
-
 interface Book {
-    title: string;
-    category: string;
-    text: string;
-    image: string;
+  id: number;
+  title: string;
+  text: string;
+  category: string;
+  image: string;
 }
 
 const BookList: React.FC = () => {
-    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-    const [selectedCount, setSelectedCount] = useState<number>(0);
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+  const navigate = useNavigate();
 
-    const handleCategoryChange = (category: string) => {
-        if (selectedCount < 3 || selectedCategories.includes(category)) {
-            const updatedCategories = selectedCategories.includes(category)
-                ? selectedCategories.filter((c) => c !== category)
-                : [...selectedCategories, category];
+  const handleBookClick = (book: Book) => {
+    navigate(`/book/${book.id}`);
+  };
 
-            setSelectedCategories(updatedCategories);
-            setSelectedCount(updatedCategories.length);
-        }
-    };
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedCount, setSelectedCount] = useState<number>(0);
+
+  const handleCategoryChange = (category: string) => {
+    if (selectedCount < 3 || selectedCategories.includes(category)) {
+      const updatedCategories = selectedCategories.includes(category)
+        ? selectedCategories.filter((c) => c !== category)
+        : [...selectedCategories, category];
+
+      setSelectedCategories(updatedCategories);
+      setSelectedCount(updatedCategories.length);
+    }
+  };
+
     const books: Book[] = [
         {
+            id: 1,
             title: ' THE SUBTLE ART OF NOT GIVING A F*CK',
             text: "by Mark Manson",
             category: 'Category 1',
             image: img1,
         },
         {
+            id: 2,
             title: '8 RULES OF LOVE',
             text: "by Jay Shetty",
             category: 'Category 2',
             image: img2,
         },
         {
+            id: 3,
             title: 'THE CREATIVE ACT',
             text: "by Rick Rubin with Neil Strauss",
             category: 'Category 3',
             image: img3,
         },
         {
+            id: 4,
             title: 'THE BOY, THE MOLE, THE FOX AND THE HORSE',
             text: "by Charlie Mackesy",
             category: 'Category 4',
             image: img4,
         },
         {
+            id: 5,
             title: 'HARRY POTTER',
             text: " by J.K. Rowling",
             category: 'Category 5',
             image: img5,
         },
         {
+            id: 6,
             title: 'IT ENDS WITH US',
             text: "by Colleen Hoover",
             category: 'Category 6',
@@ -70,18 +85,21 @@ const BookList: React.FC = () => {
         },
 
         {
+            id: 7,
             title: 'IT STARTS WITH US',
             text: "by Colleen Hoover",
             category: 'Category 7',
             image: img7,
         },
         {
+            id: 8,
             title: 'HEART BONES',
             text: "by Colleen Hoover",
             category: 'Category 8',
             image: img8,
         },
         {
+            id: 9,
             title: 'SOMEONE ELSE',
             text: "by Jojo Moyes",
             category: 'Category 9',
@@ -92,9 +110,10 @@ const BookList: React.FC = () => {
 
     let filteredBooks: Book[] = books;
 
-    if (selectedCategories.length > 0) {
-        filteredBooks = books.filter(book => selectedCategories.includes(book.category));
-    }
+  if (selectedCategories.length > 0) {
+    filteredBooks = books.filter((book) => selectedCategories.includes(book.category));
+  }
+
 
     return (
 
@@ -245,17 +264,17 @@ const BookList: React.FC = () => {
                                 </select>
                             </div>
                             <div className="books">
-                                {filteredBooks.map((book, index) => (
-                                    <div className="book-all" key={index}>
-                                        <img src={book.image} alt=""/>
-                                        <h2> {book.title}</h2>
-                                        <h3>{book.text}</h3>
-                                    </div>
-                                ))}
+                            {filteredBooks.map((book) => (
+            <div className="book-all" key={book.id} onClick={() => handleBookClick(book)}>
+              <img src={book.image} alt={book.title} />
+              <h3>{book.title}</h3>
+              <h4>{book.text}</h4>
+            </div>
+          ))}
                             </div>
-
                         </div>
                     </div>
+                 
                 </div>
 
 

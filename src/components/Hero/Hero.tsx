@@ -16,7 +16,7 @@ import bio3 from "../Hero/img/bio4.png"
 import bio4 from "../Hero/img/bio5.png"
 import end from "../Hero/img/end1.png"
 import {Link, Route, Routes} from "react-router-dom";
-import BookList from "../../Pages/Tabs/UserItems";
+import BookList from "../../Pages/Tabs/Tabs";
 
 
 const Hero = () => {
