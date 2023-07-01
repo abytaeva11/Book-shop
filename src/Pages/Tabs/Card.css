@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+#deta{
+    padding: 80px 0;
+}
+
+.book-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.book-details{
+    margin-right: -32px;
+
+}
+.book-details img{
+    width: 300px;
+    height: 450px;
+}
+.book-title h2{
+    width: 300px;
+font-size: 18px;
+font-family: Public Sans;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;
+}
+.heart {
+    width: 24px;
+height: 24px;
+margin: 0 16px 22px 0;
+transition: .4s ease-in-out;
+}
+.book-love {
+    display: flex;
+    align-items: center;
+    margin: 0 0 8px 0;
+}
+.book-title h3{
+color: var(--text-color, #19272E);
+font-size: 16px;
+font-family: Public Sans;
+font-style: normal;
+font-weight: 400;
+opacity: 0.699999988079071;
+margin-bottom: 32px;
+}
+.book-title p{
+    color: var(--text-color, #19272E);
+font-size: 18px;
+font-family: Public Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+width: 350px;
+
+    }
+.book-title h4{
+color: var(--main-color, #818EEA);
+font-size: 24px;
+font-family: Public Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: -0.3px;
+margin: 32px 0 ; 
+}
+.chet button{
+display: flex;
+width: 350px;
+height: 50px;
+justify-content: center;
+align-items: center;
+color: white;
+border-radius: 8px;
+background: var(--main-color, #818EEA);
+border: none;
+outline: none;
+cursor: pointer;
+}
+.heart-blue{
+    width: 24px;
+    height: 24px;
+    color: red;
+    margin: 0 0 22px 0;
+}
+.shareBlue{
+    width: 24px;
+    height: 24px;
+    color: red;
+
+}
+.share{
+    width: 24px;
+    height: 24px;
+
+}
+.icon-main{
+    display: flex;
+    align-items: center;
+}
+.icon-book{
+    display: flex;
+    align-items: flex-start;
+}
