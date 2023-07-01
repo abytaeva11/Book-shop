@@ -5,7 +5,6 @@ const All = () => {
     return (
         <div>
             <Hero/>
-
         </div>
     );
 };
